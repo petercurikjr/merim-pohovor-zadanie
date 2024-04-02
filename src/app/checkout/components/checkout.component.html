@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center gap-8 max-w-80">
+  <p class="text-h2 font-medium">Checkout</p>
+
+  @for (item of (cart$ | async)?.cartItems; track item.id) {
+  <div
+    class="flex justify-between p-4 border border-secondary-lightGrey rounded-xl shadow-md w-full"
+  >
+    <p>{{ item.name }}</p>
+    <p>{{ item.price | currency : item.currency }}</p>
+  </div>
+  }
+
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    @for (currency of convertCurrencyList; track $index) {
+    <button (click)="onCurrencyConvert(currency)" class="flex outline-none">
+      <div class="rounded-lg px-4 py-2 bg-secondary-darkGrey">
+        <p class="text-primary-white">Convert to {{ currency }}</p>
+      </div>
+    </button>
+    }
+  </div>
+</div>

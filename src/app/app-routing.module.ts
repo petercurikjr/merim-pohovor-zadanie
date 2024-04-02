@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './checkout/components/checkout.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':cartId',
     component: CheckoutComponent,
   },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '123' },
 ];
 
 @NgModule({
