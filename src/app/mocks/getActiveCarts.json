@@ -1,0 +1,42 @@
+[
+  {
+    "id": "123",
+    "cartItems": [
+      {
+        "id": "658fa1eb-beb3-ec50-f214-e7696b060268",
+        "name": "USB hub",
+        "price": 10.5,
+        "priceUSD": 10.5,
+        "currency": "USD"
+      },
+      {
+        "id": "658fa1eb-beb3-ec50-f215-e7696b060268",
+        "name": "Microphone",
+        "price": 5,
+        "priceUSD": 5,
+        "currency": "USD"
+      },
+      {
+        "id": "658fa1eb-beb3-ec50-f216-e7696b060268",
+        "name": "Headphones",
+        "price": 14.99,
+        "priceUSD": 14.99,
+        "currency": "USD"
+      },
+      {
+        "id": "658fa1eb-beb3-ec50-f217-e7696b060268",
+        "name": "Monitor",
+        "price": 300,
+        "priceUSD": 300,
+        "currency": "USD"
+      },
+      {
+        "id": "658fa1eb-beb3-ec50-f218-e7696b060268",
+        "name": "notebook",
+        "price": 1000,
+        "priceUSD": 1000,
+        "currency": "USD"
+      }
+    ]
+  }
+]
