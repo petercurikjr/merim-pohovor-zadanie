@@ -4,6 +4,7 @@ import { Currency, ICart, ICartItem } from '../model/cart.model';
 import { HttpClient } from '@angular/common/http';
 import {
   USD_TO_CZK,
+  USD_TO_EUR,
   USD_TO_VND,
   USD_TO_YEN,
 } from '../model/currency-convert.constant';
@@ -36,14 +37,14 @@ export class CheckoutService {
     switch (currency) {
       case Currency.CZK:
         return { ...cartItem, currency, price: cartItem.priceUSD * USD_TO_CZK };
-      case Currency.USD:
-        return { ...cartItem, currency, price: cartItem.priceUSD };
+      case Currency.EUR:
+        return { ...cartItem, currency, price: cartItem.priceUSD * USD_TO_EUR };
       case Currency.VND:
         return { ...cartItem, currency, price: cartItem.priceUSD * USD_TO_VND };
       case Currency.YEN:
         return { ...cartItem, currency, price: cartItem.priceUSD * USD_TO_YEN };
       default:
-        return cartItem;
+        return { ...cartItem, currency, price: cartItem.priceUSD };
     }
   }
 }

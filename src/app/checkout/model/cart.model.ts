@@ -14,8 +14,9 @@ export interface ICartItem {
 }
 
 export enum Currency {
-  USD = 'USD',
   YEN = 'YEN',
   CZK = 'CZK',
   VND = 'VND',
+  EUR = 'EUR',
+  USD = 'USD',
 }
